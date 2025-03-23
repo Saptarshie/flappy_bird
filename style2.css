@@ -1,0 +1,132 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    transition: background 0.5s ease;
+  }
+  
+  /* Main Containers */
+  #homePage, #gameContainer, #settingsPage, #highScoresPage {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Canvas Styling */
+  #gameCanvas {
+    border: 2px solid #008000;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 24px;
+    margin: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #008000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #006600;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Settings Form */
+  #settingsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  #settingsForm > div {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #settingsForm label {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  #settingsForm input[type="number"],
+  #settingsForm select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 60%;
+    font-size: 16px;
+  }
+  
+  /* Upload Button */
+  .upload-button {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Hide the actual file input */
+  #uploadMusic {
+    display: none;
+  }
+  
+  /* High Scores List */
+  #scoreList {
+    list-style-type: decimal;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  #scoreList li {
+    margin-bottom: 12px;
+  }
+  

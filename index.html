@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/img/icons/icon-192x192.png">
+    <meta name="theme-color" content="#008000">
+</head>
+<body>
+    <div id="homePage">
+        <h1>Flappy Bird</h1>
+        <button id="playButton">Play</button>
+        <button id="settingsButton">Settings</button>
+        <button id="highScoresButton">High Scores</button>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+    </div>
+
+    <div id="settingsPage" style="display: none;">
+        <h2>Settings</h2>
+        <form id="settingsForm">
+            <div>
+                <label for="gravity">Gravity:</label>
+                <input type="number" id="gravity" value="1.5">
+            </div>
+            <div>
+                <label for="birdVelocity">Bird Velocity:</label>
+                <input type="number" id="birdVelocity" value="-6">
+            </div>
+            <div>
+                <label for="backgroundTheme">Background Theme:</label>
+                <select id="backgroundTheme">
+                    <option value="default">Default</option>
+                    </select>
+            </div>
+            <div>
+                <label for="birdAvatar">Bird Avatar:</label>
+                <select id="birdAvatar">
+                    <option value="default">Default</option>
+                </select>
+            </div>
+            <div>
+                <label for="backgroundMusic">Background Music:</label>
+                <select id="backgroundMusic">
+                    <option value="default">Default</option>
+                </select>
+                <label for="uploadMusic" class="upload-button">Upload Music</label>
+                <input type="file" id="uploadMusic" accept="audio/*">
+            </div>
+            <button type="button" id="saveSettings">Save Settings</button>
+        </form>
+        <button id="backToHomeFromSettings">Back to Home</button>
+    </div>
+
+    <div id="highScoresPage" style="display: none;">
+        <h2>High Scores</h2>
+        <ol id="scoreList"></ol>
+        <button id="backToHomeFromScores">Back to Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
